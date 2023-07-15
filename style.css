@@ -1,0 +1,65 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Roboto, Helvetica, sans-serif;
+    background: #1e48aa;
+    padding: 0 10px;
+  }
+  
+  main{
+    max-width: 175px;
+    min-height: 175px;
+    background-color: #fff;
+    padding: 30px 15px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0;
+  }
+  
+  .loader-container{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 10;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+     align-items: center; 
+     visibility: hidden;
+     opacity: 0;
+     transition: 
+     visibility 1s ease-out,
+     opacity 1s ease-out;
+     /* Pourquoi il faut mettre la transition ici et pas sur la classe active */
+    
+  }
+  
+  .loader-container.active{
+    visibility: visible;
+    opacity: 1;
+    
+  }
+  
+  .country-name{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  
+  .city-name{
+    font-size:25px;
+    font-weight:400;
+  }
+  
+  .temperature{
+    font-size: 25px;
+    font-weight: bold;
+  }
